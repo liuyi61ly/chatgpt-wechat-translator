@@ -43,7 +43,7 @@ export async function processMessage(msg) {
 
         console.log(`group content: ${text}`);
         if (text) {
-            text = “请进行中英文翻译：”+text.trim();
+            text = "请进行中英文翻译："+text.trim();
             const reply = await getChatGPTReply(text)
             await room.say(reply);
         }
